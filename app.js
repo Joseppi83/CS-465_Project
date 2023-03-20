@@ -18,6 +18,11 @@ hbs.registerPartials(path.join(__dirname, "app_server", "views/partials"));
 
 app.set("view engine", "hbs");
 
+app.set("port", process.env.PORT || 3000);
+var server = app.listen(app.get("port"), function () {
+  console.log("Express server listening on port " + server.address().port);
+});
+
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
