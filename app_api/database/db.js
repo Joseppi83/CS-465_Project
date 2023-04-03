@@ -61,4 +61,4 @@ process.on("SIGTERM", () => {
 connect();
 // require the travlr model
 //require("./app_api/models/travlr");
-require("../models/travlr");
+require("./models/travlr");
