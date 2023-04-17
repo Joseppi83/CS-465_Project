@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const host = process.env.DB_HOST || "127.0.0.1";
-let dbURI = `mongodb://${host}/travlr`;
+//let dbURI = `mongodb://${host}/travlr`;
+let dbURI = `MONGO_URI=mongodb://travlrAdmin:travlrAdmin@127.0.0.1:27017/travlr?authSource=admin`;
 const readLine = require("readline");
 
 //Avoid monitoring deprecation
@@ -62,3 +63,4 @@ connect();
 // require the travlr model
 //require("./app_api/models/travlr");
 require("./models/travlr");
+require("./models/user");
